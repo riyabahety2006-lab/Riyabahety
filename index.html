@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adobe | Creativity for All</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-image: url("C:/Users/riyab/Downloads/Black and Beige Modern Minimal Elegant Aesthetician Business Card.png");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #f5e6ca;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 550px;
+      background-image: url("C:/Users/riyab/Downloads/Black and Beige Modern Minimal Elegant Aesthetician Business Card.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #f5e6ca;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.55);
+    }
+
+    .header-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-text h1 {
+      font-size: 7em;
+      letter-spacing: 3px;
+      color: #d4af37;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #f5e6ca;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc66;
+    }
+
+    section {
+      padding: 70px 25px;
+      max-width: 1100px;
+      margin: 70px auto;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      border-radius: 15px;
+    }
+
+    h2 {
+      color: #d4af37;
+      font-size: 2.6em;
+      margin-bottom: 20px;
+    }
+
+    .products, .features, .awards, .team, .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .product, .feature, .award, .member, .plan {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 260px;
+      transition: 0.3s;
+    }
+
+    .product:hover, .feature:hover, .plan:hover, .member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    }
+
+    .product img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .plan {
+      cursor: pointer;
+    }
+
+    .extra {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #ffcc66;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .show {
+      display: block;
+      opacity: 1;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+
+    form button {
+      background: #d4af37;
+      color: #000;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #ffcc66;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.9);
+      color: #f5e6ca;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    .member img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .member h3 {
+      color: #ffcc66;
+      margin-top: 5px;
+    }
+
+    .member p {
+      color: #f5e6ca;
+      font-size: 0.9em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-text">
+      <h1>Adobe</h1>
+      <p>Empowering creativity and innovation for all — design, edit, and inspire with Adobe tools.</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#history">History</a>
+    <a href="#products">Products</a>
+    <a href="#features">Features</a>
+    <a href="#awards">Awards</a>
+    <a href="#team">Team</a>
+    <a href="#plans">Plans</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Adobe</h2>
+    <p>Founded in 1982, Adobe revolutionized digital design. From Photoshop to Premiere Pro, Adobe's tools are the backbone of global creative industries.</p>
+  </section>
+
+  <section id="history">
+    <h2>Our Journey</h2>
+    <p>Adobe began in a small office in California and grew to become a world leader in creative software.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="C:/Users/riyab/Downloads/photoshop-5977809_1280.webp" alt="Photoshop">
+        <h3>Photoshop</h3>
+        <p>Edit images and create stunning visual art.</p>
+      </div>
+      <div class="product">
+        <img src="C:/Users/riyab/Downloads/adobe-illustrator-5977785_1280.webp" alt="Illustrator">
+        <h3>Illustrator</h3>
+        <p>Design vector graphics with precision and creativity.</p>
+      </div>
+      <div class="product">
+        <img src="C:/Users/riyab/Downloads/adobe-premiere-pro-icon.webp" alt="Premiere Pro">
+        <h3>Premiere Pro</h3>
+        <p>Professional video editing for creators and filmmakers.</p>
+      </div>
+      <div class="product">
+        <img src="C:/Users/riyab/Downloads/indesign-5981328_1280.webp" alt="InDesign">
+        <h3>InDesign</h3>
+        <p>Design layouts that speak louder than words.</p>
+      </div>
+      <div class="product">
+        <img src="C:/Users/riyab/Downloads/adobe-after-effects-logo-1-1.png" alt="After Effects">
+        <h3>After Effects</h3>
+        <p>Create motion graphics and stunning cinematic effects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>Why Choose Adobe?</h2>
+    <div class="features">
+      <div class="feature"><h3>Creative Cloud</h3><p>Access all apps and files anywhere.</p></div>
+      <div class="feature"><h3>AI Tools</h3><p>Use Firefly and Sensei for precision.</p></div>
+      <div class="feature"><h3>Cross-Platform</h3><p>Work on any device seamlessly.</p></div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>Our Awards</h2>
+    <div class="awards">
+      <div class="award"><h3>Innovation Award</h3><p>Recognized for revolutionizing creative software.</p></div>
+      <div class="award"><h3>Design Excellence</h3><p>Celebrated for empowering designers globally.</p></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="team">
+      <div class="member">
+        <img src="C:/Users/riyab/Downloads/OIP (14).webp" alt="CEO">
+        <h3>Shantanu Narayen</h3>
+        <p>CEO & Visionary Leader</p>
+      </div>
+      <div class="member">
+        <img src="C:/Users/riyab/Downloads/istockphoto-1040964880-612x612.jpg" alt="Designer">
+        <h3>Lisa Wong</h3>
+        <p>Creative Director</p>
+      </div>
+      <div class="member">
+        <img src="C:/Users/riyab/Downloads/What-Does-a-Lead-Engineer-Do.jpeg" alt="Engineer">
+        <h3>David Kim</h3>
+        <p>Lead Engineer</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <h2>Subscription Plans</h2>
+    <div class="plans">
+      <div class="plan" onclick="toggleDetails(this, 'Starter Plan: ₹799/month — Perfect for beginners.')">
+        <h3>Starter</h3>
+        <ul><li>Photoshop & Illustrator</li><li>2 GB Cloud</li></ul>
+        <p class="extra"></p>
+      </div>
+      <div class="plan" onclick="toggleDetails(this, 'Pro Plan: ₹1599/month — For professionals who need all tools.')">
+        <h3>Pro</h3>
+        <ul><li>All Creative Apps</li><li>100 GB Cloud</li></ul>
+        <p class="extra"></p>
+      </div>
+      <div class="plan" onclick="toggleDetails(this, 'Enterprise Plan: ₹2999/month — For large teams & businesses.')">
+        <h3>Enterprise</h3>
+        <ul><li>All Apps + AI</li><li>Unlimited Cloud</li></ul>
+        <p class="extra"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <p>Q: Can I cancel anytime?<br>A: Yes, you can cancel your plan anytime.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div id="imageContainer" style="margin-top:10px;"></div>
+
+    <p id="demo">RIYABAHEY</p>
+    <button onclick="changeText()">rriyabahety@gmail.com</button>
+
+    <form onsubmit="return submitForm()">
+      <label>Name</label>
+      <input type="text" id="name" required>
+      <label>Email</label>
+      <input type="email" id="email" required>
+      <label>Message</label>
+      <textarea id="message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+  <p>Email: <a href="mailto:riyaa@email.com">riyaa@email.com</a></p>
+    <p>Instagram: <a href="#">@riyaa_designs</a></p>
+    © 2025 Adobe Creative | Designed by RIYA BAHETY
+  </footer>
+
+  <script>
+    // Welcome alert
+    alert("Welcome to Adobe World !!");
+
+    // Change text example
+    function changeText() {
+      document.getElementById("demo").innerHTML = "riyaa@email.com";
+    }
+
+    // Plan toggle details
+    function toggleDetails(planElement, detailsText) {
+      const extra = planElement.querySelector(".extra");
+      if (extra.classList.contains("show")) {
+        extra.classList.remove("show");
+        setTimeout(() => extra.textContent = "", 300);
+      } else {
+        document.querySelectorAll(".extra").forEach(e => {
+          e.classList.remove("show");
+          e.textContent = "";
+        });
+        extra.textContent = detailsText;
+        setTimeout(() => extra.classList.add("show"), 100);
+      }
+    }
+
+    // Contact form
+    function submitForm() {
+      const name = document.getElementById("name").value;
+      alert("Thank you, " + name + "! Your message has been sent.");
+      return false;
+    }
+  </script>
+</body>
+</html>
